@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Кибербезопасность — защита в цифровом мире">
+  <title>Кибербезопасность</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Фон с частицами -->
+  <div id="particles-js"></div>
+  <div class="krit-notice">
+    Участник конкурса «КРИТ-2026» Шайхутдинов Урал приветствует жюри конкурса!
+  </div>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <span>Кибербезопасность</span>
+        </div>
+        <nav class="nav">
+          <a href="#home" class="nav-link active">Главная</a>
+          <a href="#threats" class="nav-link">Угрозы</a>
+          <a href="#protection" class="nav-link">Защита</a>
+          <a href="#password" class="nav-link">Пароли</a>
+          <a href="#tips" class="nav-link">Советы</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главная секция -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title hover-rewrite">Кибербезопасность</h1>
+        <p class="hero-text">
+          Защита ваших данных в цифровом пространстве — это не просто рекомендация, а необходимость. 
+          Узнайте, как обезопасить себя от современных киберугроз.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-value">300K+</div>
+            <div class="stat-label">атак ежедневно</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">95%</div>
+            <div class="stat-label">ошибок человека</div>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#protection" class="btn btn-primary">Начать защиту</a>
+          <a href="#threats" class="btn btn-secondary">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- Угрозы -->
+  <section id="threats" class="section threats-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title hover-rewrite">Основные киберугрозы</h2>
+        <p class="section-subtitle">Знай своего врага</p>
+      </div>
+      <div class="threats-grid">
+        <div class="threat-card">
+          <h3 class="threat-title hover-rewrite">Вредоносное ПО</h3>
+          <p>Программы, которые крадут данные, шифруют файлы или повреждают систему.</p>
+        </div>
+        <div class="threat-card">
+          <h3 class="threat-title hover-rewrite">Фишинг</h3>
+          <p>Поддельные письма и сайты, имитирующие банки или сервисы для кражи логинов.</p>
+        </div>
+        <div class="threat-card">
+          <h3 class="threat-title hover-rewrite">DDoS-атаки</h3>
+          <p>Перегрузка серверов, делающая сайты недоступными для пользователей.</p>
+        </div>
+        <div class="threat-card">
+          <h3 class="threat-title hover-rewrite">Социальная инженерия</h3>
+          <p>Манипуляции через звонки, сообщения или личные встречи для получения доступа.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Защита -->
+  <section id="protection" class="section protection-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title hover-rewrite">Методы защиты</h2>
+        <p class="section-subtitle">Как защитить свои данные</p>
+      </div>
+      <div class="protection-grid">
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Сложные пароли</h3>
+          <p>Используйте уникальные пароли длиной от 12 символов.</p>
+        </div>
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Двухфакторная аутентификация</h3>
+          <p>Добавьте второй уровень защиты к своим аккаунтам.</p>
+        </div>
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Антивирус</h3>
+          <p>Установите надёжное ПО и регулярно обновляйте его.</p>
+        </div>
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Резервное копирование</h3>
+          <p>Храните важные файлы в нескольких местах.</p>
+        </div>
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Обновления ПО</h3>
+          <p>Не откладывайте установку обновлений операционной системы.</p>
+        </div>
+        <div class="protection-card">
+          <h3 class="protection-title hover-rewrite">Безопасный Wi-Fi</h3>
+          <p>Избегайте публичных сетей без VPN.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Пароли -->
+  <section id="password" class="section password-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title hover-rewrite">Генератор надёжных паролей</h2>
+        <p class="section-subtitle">Создайте пароль, который невозможно взломать</p>
+      </div>
+      <div class="password-generator">
+        <div class="password-display" id="passwordDisplay">••••••••••••••••</div>
+        <div class="password-controls">
+          <input type="range" id="passwordLength" min="8" max="32" value="16">
+          <button class="btn btn-generate" id="generateBtn">Сгенерировать</button>
+          <button class="btn btn-copy" id="copyBtn">Копировать</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Советы -->
+  <section id="tips" class="section tips-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title hover-rewrite">Практические советы</h2>
+        <p class="section-subtitle">Ежедневные правила безопасности</p>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Не открывайте подозрительные письма</h3>
+        </div>
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Используйте разные пароли</h3>
+        </div>
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Проверяйте адрес сайта</h3>
+        </div>
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Обучайтесь новым угрозам</h3>
+        </div>
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Не делитесь личной информацией</h3>
+        </div>
+        <div class="tip-card">
+          <h3 class="tip-title hover-rewrite">Включайте приватность в соцсетях</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <p>Проект участника конкурса «КРИТ-2026»<br>Номинация: «Веб-проект: сайт с нуля»<br>Тема: «Кибербезопасность»</p>
+    </div>
+  </footer>
+
+  <!-- Скрипты -->
+  <script src="js/particles.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
