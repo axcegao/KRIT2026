@@ -30,7 +30,7 @@ body {
 
 .krit-notice {
   position: fixed;
-  top: 20px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 255, 170, 0.1);
@@ -42,9 +42,13 @@ body {
   z-index: 2000;
   border: 1px solid rgba(0, 255, 170, 0.3);
   backdrop-filter: blur(5px);
+  max-width: calc(100% - 40px);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* ФОН */
 #particles-js {
   position: fixed;
   top: 0;
@@ -52,13 +56,12 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
-/* ШАПКА */
 .header {
   position: fixed;
-  top: 60px;
+  top: 50px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -105,6 +108,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .menu-toggle span {
@@ -113,14 +117,14 @@ body {
   height: 2px;
   background: var(--primary);
   border-radius: 1px;
+  transition: var(--transition);
 }
 
-/* ГЛАВНАЯ */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 120px 0 80px;
+  padding: 140px 0 80px;
   position: relative;
 }
 
@@ -129,12 +133,23 @@ body {
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 800;
   margin-bottom: 20px;
   color: var(--light);
-  position: relative;
-  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: linear-gradient(to right, var(--light) 50%, var(--primary) 50%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease;
+}
+
+.hero-title:hover {
+  background-position: -100% 0;
 }
 
 .hero-text {
@@ -240,7 +255,6 @@ body {
 .scroll-indicator span:nth-child(2) { opacity: 0.6; }
 .scroll-indicator span:nth-child(3) { opacity: 1; }
 
-/* СЕКЦИИ */
 .section {
   padding: 100px 0;
 }
@@ -255,8 +269,6 @@ body {
   font-weight: 800;
   margin-bottom: 15px;
   color: var(--light);
-  position: relative;
-  display: inline-block;
 }
 
 .section-subtitle {
@@ -265,37 +277,23 @@ body {
   font-weight: 500;
 }
 
-/* Эффект переписывания */
 .hover-rewrite {
   position: relative;
   display: inline-block;
-  white-space: nowrap;
+  background: linear-gradient(to right, var(--light), var(--light));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-size 0.4s ease;
 }
 
-.hover-rewrite.rewriting {
-  visibility: hidden;
+.hover-rewrite:hover {
+  background-image: linear-gradient(to right, var(--primary), var(--primary));
+  background-size: 100% 100%;
 }
 
-.hover-rewrite.rewriting::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--primary);
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.hover-rewrite .highlight {
-  display: inline-block;
-  background-color: var(--primary);
-  color: var(--dark);
-  animation: none;
-}
-
-/* Угрозы / Защита / Советы */
 .threats-grid,
 .protection-grid,
 .tips-grid {
@@ -329,17 +327,15 @@ body {
   font-weight: 700;
   margin-bottom: 15px;
   color: var(--light);
-  position: relative;
-  display: inline-block;
 }
 
 .threat-card p,
-.protection-card p {
+.protection-card p,
+.tip-card p {
   color: var(--gray);
   line-height: 1.7;
 }
 
-/* Генератор паролей */
 .password-section {
   background: rgba(0, 255, 170, 0.02);
   border-top: 1px solid rgba(0, 255, 170, 0.1);
@@ -404,7 +400,6 @@ body {
   padding: 12px 20px;
 }
 
-/* Футер */
 .footer {
   background: rgba(0, 0, 0, 0.9);
   padding: 40px 0;
@@ -415,19 +410,103 @@ body {
   line-height: 1.6;
 }
 
-/* АДАПТИВНОСТЬ */
 @media (max-width: 768px) {
+  .nav {
+    display: none !important;
+  }
+  
+  .menu-toggle {
+    display: none !important;
+  }
+  
   .krit-notice {
-    top: 10px;
+    top: 5px;
     font-size: 0.8rem;
     padding: 6px 15px;
+    max-width: calc(100% - 20px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .header { top: 50px; }
-  .hero-title { font-size: 3rem; }
-  .section-title { font-size: 2.2rem; }
-  .hero-stats { grid-template-columns: 1fr; }
-  .cta-buttons { flex-direction: column; }
-  .nav { display: none; }
-  .menu-toggle { display: flex; }
-  .password-controls { flex-direction: column; }
+  
+  .header {
+    top: 45px;
+  }
+  
+  .hero {
+    padding-top: 130px;
+  }
+  
+  .hero-title { 
+    font-size: 2.5rem; 
+  }
+  
+  .section-title { 
+    font-size: 2rem; 
+  }
+  
+  .threat-title,
+  .protection-title,
+  .tip-title {
+    font-size: 1.3rem;
+  }
+  
+  .hero-stats { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .password-controls {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .password-controls input[type="range"] {
+    width: 100%;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title { 
+    font-size: 2.2rem; 
+  }
+  
+  .section-title { 
+    font-size: 1.8rem; 
+  }
+  
+  .threat-title,
+  .protection-title,
+  .tip-title {
+    font-size: 1.2rem;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .krit-notice {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+  
+  .header {
+    top: 40px;
+  }
+  
+  .hero {
+    padding-top: 120px;
+  }
 }
